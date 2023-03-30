@@ -1,0 +1,9 @@
+h2{
+  text-align: center;
+  color: cadetblue;
+  font-weight: bold;
+  text-transform: uppercase
+}
+.red{
+  text-shadow: 3px 4px 8px red;
+}

@@ -1,0 +1,8 @@
+<p><span >Id:</span>{{toDoItem.id}}</p>
+<p><span>Name:</span>{{toDoItem.name}}</p>
+<p><span class="red">Is Finished:</span>{{toDoItem.isFinished ? "Yes" : "No"}}</p>
+<ul>
+  <li *ngFor="let day of days">
+    {{day}}
+  </li>
+</ul>
