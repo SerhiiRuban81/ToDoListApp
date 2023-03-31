@@ -1,8 +1,33 @@
 <p><span >Id:</span>{{toDoItem.id}}</p>
 <p><span>Name:</span>{{toDoItem.name}}</p>
 <p><span class="red">Is Finished:</span>{{toDoItem.isFinished ? "Yes" : "No"}}</p>
-<ul>
-  <li *ngFor="let day of days">
+<ul class="items">
+  <!-- <li *ngFor="let day of days">
     {{day}}
+  </li> -->
+  <li *ngFor="let item of itemsList">
+    {{item.id}}. {{item.name}}
   </li>
 </ul>
+<hr>
+<div *ngIf="itemsList.length>0">
+{{itemsList.length}} {{itemsList.length == 1 ? "справа" : "справ"}}
+</div>
+<hr>
+<div *ngIf="itemsList.length>0">{{itemsList.length}}
+  <span [ngSwitch]="itemsList.length">
+    <span *ngSwitchCase="1">справа</span>
+    <span *ngSwitchCase="2">справи</span>
+    <span *ngSwitchCase="3">справи</span>
+    <span *ngSwitchCase="4">справи</span>
+    <span *ngSwitchDefault>справ</span>
+  </span>
+</div>
+<footer>
+  <div>
+    <a [href]="homePageUrl" [class.redFont]="true" [class.blueFont]="blueFont">Visit Home Page</a>
+    <a href="google.com" [ngClass]="googleClasses" [style.textShadow]="'3px 2px 8px navy'"
+    [style.fontSize]="'4em'">Google</a>
+  </div>
+  <input type="checkbox" [(ngModel)]="blueFont"><label [ngStyle]="lblStyles">Blue Font</label>
+</footer>

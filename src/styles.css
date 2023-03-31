@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.redFont{
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+  color: brown;
+  background-color:#EEE;
+}
+.blueFont{
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+  color: blue;
+  background-color: #DDD;
+}
